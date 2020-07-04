@@ -1,4 +1,5 @@
 Feature: Open Cart Application
+
 Scenario: Verify Login Func
 Given User on the Home Page
 When User enters valid login id and password and clicks login button

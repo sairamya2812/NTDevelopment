@@ -44,7 +44,7 @@ public static WebDriver driver;
 	public BaseClass() 	{
 	try {
 		prop=new Properties();
-		FileInputStream fin=new FileInputStream("C:\\Users\\Ramya\\Desktop\\Program files\\eclipse-workspace\\OpenCart_Cucumber\\src\\main\\java\\Configprop\\config.properties");
+		FileInputStream fin=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Configprop\\config.properties");
 		prop.load(fin);
 	}
 	catch(FileNotFoundException fe)
