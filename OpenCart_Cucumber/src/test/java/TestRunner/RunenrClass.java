@@ -10,6 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src\\test\\resources\\featurespackage\\OPCART.feature",
 		glue= {"TestDefinitionpackage","Hooks"}, dryRun=false, monochrome=true,strict=false
+	,plugin= {"json:target\\jsonreport.json"}
 		)
 
 

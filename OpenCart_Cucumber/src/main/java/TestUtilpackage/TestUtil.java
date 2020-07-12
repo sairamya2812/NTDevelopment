@@ -12,8 +12,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class TestUtil {
-public static long page_load_time=20;
-public static long implicit_wait_time=30;
+public static long page_load_time=40;
+public static long implicit_wait_time=50;
 public static String testdatafile="C:\\Users\\admin\\eclipse-workspace\\OpenCart\\src\\test\\java\\DataDrivenclass\\TestData-OpenCart.xlsx";
 public static Workbook wb;
 public static Object[][] gettestData(String sheetName)

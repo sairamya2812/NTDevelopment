@@ -58,8 +58,8 @@ public static WebDriver driver;
 	public static void browserlaunch() {
 
 		String browsername = prop.getProperty("browser");
-		
-		String driverpath=prop.getProperty("driverlocation");
+		String driverlocation=prop.getProperty("driverlocation");
+		String driverpath=System.getProperty("user.dir")+driverlocation;
 		String url=prop.getProperty("url");
 		if(prop.getProperty("browser").equals("chrome"))
 		{
@@ -145,7 +145,7 @@ public static WebDriver driver;
 	
 	public static void getScreenshot(String ssname) throws IOException  {
 		
-String screenshotpath = prop.getProperty("Screenshotpath");
+String screenshotpath = prop.getProperty(System.getProperty("user.dir")+"Screenshotpath");
 TakesScreenshot ss=(TakesScreenshot)driver;
 File src=ss.getScreenshotAs(OutputType.FILE);
 File dest=new File(screenshotpath+ssname+timestamp+".png");
@@ -153,7 +153,7 @@ FileUtils.copyFile(src, dest);
 	}
 
 public static void getScreenshothandler(String ssname) {
-		String screenshotpath = prop.getProperty("Screenshotpath");
+		String screenshotpath = prop.getProperty(System.getProperty("user.dir")+"Screenshotpath");
 		TakesScreenshot ss=(TakesScreenshot)driver;
 		File src=ss.getScreenshotAs(OutputType.FILE);
 		File dest=new File(screenshotpath+ssname+timestamp+".png");
@@ -166,7 +166,7 @@ try {
 	
 	public static void getScreenshotrobot(String ssname) throws IOException, AWTException
 	{
-		String screenshotpath = prop.getProperty("Screenshotpath");
+		String screenshotpath = prop.getProperty(System.getProperty("user.dir")+"Screenshotpath");
 		Robot r= new Robot();
 		Dimension d=Toolkit.getDefaultToolkit().getScreenSize();
 		Rectangle rec=new Rectangle(d);
@@ -324,6 +324,7 @@ ac.click(element).build().perform();
 	driver.switchTo().window(windowHandle);
 	}
 
+	
 
 
 

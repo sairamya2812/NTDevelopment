@@ -94,6 +94,8 @@ public void user_clicks_logout_button() throws Throwable {
 @Then("^User should be logged out$")
 public void user_should_be_logged_out() throws Throwable {
  String title = driver.getTitle();
+ 
+ 
  Assert.assertTrue(title.contains("Account Logout"));
 }
 
